@@ -4,8 +4,22 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="FraudML Analytics", layout="wide")
 
-st.title("🔍 FraudML Analytics")
+st.title("🔍 FraudML Analytic
 st.write("Detección de Fraudes usando Machine Learning")
+
+st.subheader("Pregunta de Investigación")
+st.write("¿Cómo ayuda el Machine Learning a detectar fraudes en transacciones financieras?")
+
+st.subheader("Keywords")
+st.write("""
+• Machine Learning
+• Fraud Detection
+• Financial Transactions
+• Anomaly Detection
+""")
+
+st.subheader("Integrante")
+st.write("Irianny Ardila")
 
 archivo = st.file_uploader(
     "Sube tu archivo CSV de Scopus",
