@@ -24,13 +24,13 @@ st.write("Irianny Ardila")
 
 df = pd.read_csv("irianny_ardila_scopus_export_Jun 8-2026_474f0cce-fc7a-403b-9a8c-0ca9139819c0.csv")
 
-    st.subheader("Métricas Generales")
+st.subheader("Métricas Generales")
 
-    col1, col2, col3 = st.columns(3)
+col1, col2, col3 = st.columns(3)
 
-    col1.metric("Total Artículos", len(df))
-    col2.metric("Promedio Citas", round(df['Cited by'].mean(),2))
-    col3.metric("Año Más Reciente", int(df['Year'].max()))
+col1.metric("Total Artículos", len(df))
+col2.metric("Promedio Citas", round(df['Cited by'].mean(),2))
+col3.metric("Año Más Reciente", int(df['Year'].max()))
 
     st.subheader("Vista del Dataset")
     st.dataframe(df)
