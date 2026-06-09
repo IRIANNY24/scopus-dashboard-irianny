@@ -4,7 +4,7 @@ import matplotlib.pyplot as plt
 
 st.set_page_config(page_title="FraudML Analytics", layout="wide")
 
-st.title("🔍 FraudML Analytic
+st.title("🔎 FraudML Analytics")
 st.write("Detección de Fraudes usando Machine Learning")
 
 st.subheader("Pregunta de Investigación")
