@@ -32,40 +32,40 @@ col1.metric("Total Artículos", len(df))
 col2.metric("Promedio Citas", round(df['Cited by'].mean(),2))
 col3.metric("Año Más Reciente", int(df['Year'].max()))
 
-    st.subheader("Vista del Dataset")
-    st.dataframe(df)
+st.subheader("Vista del Dataset")
+st.dataframe(df)
 
-    st.subheader("Publicaciones por Año")
+st.subheader("Publicaciones por Año")
 
-    publicaciones = df['Year'].value_counts().sort_index()
+publicaciones = df['Year'].value_counts().sort_index()
 
-    fig, ax = plt.subplots()
+fig, ax = plt.subplots()
 
-    ax.bar(publicaciones.index, publicaciones.values)
+ax.bar(publicaciones.index, publicaciones.values)
 
-    ax.set_xlabel("Año")
-    ax.set_ylabel("Cantidad")
+ax.set_xlabel("Año")
+ax.set_ylabel("Cantidad")
 
-    st.pyplot(fig)
+st.pyplot(fig)
 
-    st.subheader("Top 10 Artículos Más Citados")
+st.subheader("Top 10 Artículos Más Citados")
 
-    top10 = df.sort_values(
+top10 = df.sort_values(
         by="Cited by",
         ascending=False
-    ).head(10)
+).head(10)
 
-    st.dataframe(
-        top10[["Title","Cited by"]]
-    )
+st.dataframe(
+    top10[["Title","Cited by"]]
+)
 
-    st.subheader("Distribución de Citas")
+st.subheader("Distribución de Citas")
 
-    fig2, ax2 = plt.subplots()
+fig2, ax2 = plt.subplots()
 
-    ax2.hist(df["Cited by"], bins=10)
+ax2.hist(df["Cited by"], bins=10)
 
-    ax2.set_xlabel("Número de citas")
-    ax2.set_ylabel("Frecuencia")
+ax2.set_xlabel("Número de citas")
+ax2.set_ylabel("Frecuencia")
 
-    st.pyplot(fig2)
+st.pyplot(fig2)
