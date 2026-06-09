@@ -21,14 +21,8 @@ st.write("""
 st.subheader("Integrante")
 st.write("Irianny Ardila")
 
-archivo = st.file_uploader(
-    "Sube tu archivo CSV de Scopus",
-    type=["csv"]
-)
 
-if archivo is not None:
-
-    df = pd.read_csv(archivo)
+df = pd.read_csv("irianny_ardila_scopus_export_Jun 8-2026_474f0cce-fc7a-403b-9a8c-0ca9139819c0.csv")
 
     st.subheader("Métricas Generales")
 
